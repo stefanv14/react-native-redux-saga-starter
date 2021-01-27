@@ -1,0 +1,23 @@
+// import type {ActionFormat} from "../action-flow";
+import * as actionTypes from '../action-types'
+
+export function fetchTestData() {
+  return {
+    type: actionTypes.TEST_ACTION,
+  }
+}
+
+export function fetchTestDataSuccess(response) {
+  return {
+    type: actionTypes.TEST_ACTION_SUCCESS,
+    payload: response,
+  }
+}
+
+export function fetchTestDataFailed(message) {
+  return {
+    type: actionTypes.TEST_ACTION_FAILED,
+    status: 'error',
+    payload: message,
+  }
+}
